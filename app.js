@@ -1,10 +1,9 @@
-var express = require('express');
-var app = express();
+var koa = require('koa');
+var serve = require('koa-static');
+var app = koa();
 
-app.get('/', function (req, res) {
-  res.render('Hello World!');
-});
+// static file serve
+app.use(serve(__dirname + '/src'));
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+app.listen(process.env.PORT || 4000);
+console.log('running on http://localhost:' + (process.env.PORT || 4000) + '/')

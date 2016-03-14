@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node --harmony app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ahyahya/jThree-Test/issues"
   },
-  "homepage": "https://github.com/ahyahya/jThree-Test#readme"
+  "homepage": "https://github.com/ahyahya/jThree-Test#readme",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-static": "^2.0.0"
+  }
 }
